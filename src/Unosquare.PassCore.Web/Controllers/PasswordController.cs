@@ -131,7 +131,7 @@ public class PasswordController : Controller
         if (_options.Recaptcha != null && string.IsNullOrWhiteSpace(_options.Recaptcha.PrivateKey))
             return true;
 
-        if (_options.Recaptcha == null || string.IsNullOrEmpty(recaptchaResponse) == false)
+        if (_options.Recaptcha == null || string.IsNullOrEmpty(recaptchaResponse) == true)
             return false;
 
         var requestUrl = new Uri(
