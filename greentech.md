@@ -13,3 +13,5 @@ Les modifications faites dans appsettings.json sont les suivantes :
 - L'email n'est pas utilisé à la place du username.
 
 Le problème du captcha est qu'il semble rester valide après plusieurs utilisations du formulaire mais réellement non, il faut recharger la page à chaque fois.
+
+Pour éteindre PassCore, il faut se connecter à GTAP, aller dans "Services" sur le dossier démarrer, aller tout en bas jusqu'à "World Wide Web Publishing Service" puis faire clic droit et "Stop".
