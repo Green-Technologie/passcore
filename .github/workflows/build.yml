@@ -9,5 +9,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Make a test
-      run: echo hi
+    - name: Build everything
+      run: dotnet publish --configuration Release --runtime win-x64 --output "build/"
