@@ -11,3 +11,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build everything
       run: dotnet publish --configuration Release --runtime win-x64 --output "build/"
+    - name: Put it in a zip
+      run: Compress-Archive -Path build/ -DestinationPath build.zip
+    - name: Upload the zip
+      uses: actions/upload-artifact@2.2.4
+      with:
+        name: build
