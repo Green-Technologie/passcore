@@ -13,6 +13,6 @@ jobs:
     - name: Put it in a zip
       run: Compress-Archive -Path build/ -DestinationPath build.zip
     - name: Upload the zip
-      uses: actions/upload-artifact@2.2.4
+      uses: actions/upload-artifact@v2
       with:
         name: build
