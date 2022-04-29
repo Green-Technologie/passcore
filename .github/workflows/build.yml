@@ -4,15 +4,16 @@ on: [push]
 
 jobs:
   build:
+    runs-on: windows-latest
 
     runs-on: windows-latest
-    
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build everything
       run: dotnet publish --configuration Release --runtime win-x64 --output "build/"
     - name: Upload it !
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: build
         path: build/
